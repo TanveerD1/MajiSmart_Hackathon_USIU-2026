@@ -1,0 +1,51 @@
+{
+  "model_type": "RandomForestClassifier",
+  "feature_cols": [
+    "flow_lpm",
+    "rolling_mean",
+    "rolling_variance",
+    "near_zero_count",
+    "sustained_ticks",
+    "hour_sin",
+    "hour_cos",
+    "is_scheduled",
+    "flow_vs_mean_ratio",
+    "is_night",
+    "variance_class"
+  ],
+  "target_col": "is_anomaly",
+  "metrics": {
+    "accuracy": 1.0,
+    "precision_anomaly": 1.0,
+    "recall_anomaly": 1.0,
+    "f1_score": 1.0,
+    "roc_auc": 1.0,
+    "cv_f1_mean": 1.0,
+    "cv_f1_std": 0.0,
+    "false_positive_rate": 0.0,
+    "false_negative_rate": 0.0,
+    "confusion_matrix": [
+      [
+        3696,
+        0
+      ],
+      [
+        0,
+        336
+      ]
+    ],
+    "feature_importances": {
+      "is_night": 0.217645,
+      "near_zero_count": 0.156972,
+      "flow_lpm": 0.148051,
+      "hour_sin": 0.124059,
+      "rolling_variance": 0.110145,
+      "hour_cos": 0.109039,
+      "rolling_mean": 0.083834,
+      "variance_class": 0.025672,
+      "flow_vs_mean_ratio": 0.014221,
+      "sustained_ticks": 0.006498,
+      "is_scheduled": 0.003862
+    }
+  }
+}
